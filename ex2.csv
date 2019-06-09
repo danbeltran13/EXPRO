@@ -1,0 +1,35 @@
+DATE,5/9/2019,5/13/2019,5/15/2019,5/17/2019,5/20/2019
+TIME,5:40 PM,9:00 AM,9:40 PM,9:30 AM,10:50 AM
+WEIGHT,,,148,147.6,150.4
+EX,Bench Press,Bench Press,Deadlift ,Bench Press,Deadlift
+WU,40/8/2,50/12/2,15/18/2,25/12/2,25/12/2
+SET 1,52.5/8,62.5/4,15/15,50/8,35/12
+SET 2,60/4,55/7,25/12,50/8,40/12
+SET 3,60/6,55/7,,57.5/5,42.5/12 
+SET 4,60/4,55/5,,57.5/6,
+,,,,,
+EX,Dips,Barbell Back Squat,Inclined Dumbell Press,Barbell Back Squat,Inclined Dumbell Press
+WU,NA,0,25/12/2,15/15/1,25/12/2
+SET 1,155/10,10/12,30/12,15/15,30/12
+SET 2,155/12,25/10,30/12,35/8,35/12
+SET 3,155/10,25/11,30/12,35/8,35/12
+SET 4,155/10,,,,
+SET 5,155/10,,,,
+,,,,,
+EX,Lateral Raises,Pull Ups,Inverted Row,Pull Ups,Inverted Row
+WU,NA,NA,NA,NA,NA
+SET 1,15/14,0/12,25/12,0/12,2/12
+SET 2,15/14,0/8,25/12,0/12,3/12
+SET 3,20/12,0/8,25/12,0/9,4/12
+,,,,,
+EX,Shoulder Press,Machine Leg Curls,Lateral Raises,Biceps Curls,Lateral Raises
+WU,20/8/1,25/10/1,NA,NA,NA
+SET 1,25/6,25/10,25/12,30/8,25/12
+SET 2,25/8,25/15,25/12,30/8,25/12
+SET 3,,25/12,25/12,30/8,25/12
+,,,,,
+EX,,Standing Overhead Barbell Press,,,
+WU,,0/10,,,
+SET 1,,5/12,,,
+SET 2,,10/1,,,
+SET 3 ,,12.5/12,,,

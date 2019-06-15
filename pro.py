@@ -3,7 +3,7 @@ import matplotlib.dates as dates
 import matplotlib.pyplot as pyplot
 import tkinter
 
-FILE = 'ex2.csv'
+FILE = 'ex3.csv'
 file = open(FILE,'r')
 
 
@@ -116,6 +116,12 @@ def returnList (String, Volume = True ):
                     if String ==  'WEIGHT':
                         if DAYS[i][String] != '':
                             t.append(float(DAYS[i][String]))
+                        else:
+                            t.append(DAYS[i][String])
+                    if String == 'TIME':
+                        if DAYS[i][String] != '':
+                            t.append((DAYS[i][String]))
+                            print(t)
                         else:
                             t.append(DAYS[i][String])
 

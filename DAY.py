@@ -8,6 +8,7 @@
 
 
 import tkinter
+import datetime
 import matplotlib
 import pro as list
 matplotlib.use('TkAgg')
@@ -25,18 +26,48 @@ class board:
 
         #GETS THE X AND Y VALUES
         x_values = list.returnList(x)
-        y_values = list.returnList(y)
+        y_values = list.returnList(y,Volume = False)
+
+
+
         # FIXES THE LENGHT OF THE LISTS
         list.fixLenght(x_values,y_values)
 
-        fig = Figure(figsize=(9,4))
+
+
+        fig = Figure(figsize=(13,9))
         a = fig.add_subplot(111)
 
-        print(x_values)
-        print(y_values)
+
+
+        # PRINT BASED ON WHAT IS ASKED
+
+        xd= False
+        yd = False
+        print(xd, yd)
         if x == 'DATES':
-            a.plot_date(dates.datestr2num(x_values), y_values)
-        a.scatter(x_values, y_values)
+            xd = True
+
+            for i in range(0,len(x_values)):
+                x_values[i]=dates.datestr2num(x_values[i])
+                print(x_values[i],1)
+
+        print(x_values,1,y_values,2)
+        if y == 'DATES':
+            yd = True
+            # IF X AND Y ARE BOTH DATES THEY SHARE THE SAME MEMORY ADRESS THEREFORE A CHANGE IS ONLY REQUIRED IN 1
+            if x != 'DATES':
+                for i in range(0,len(x_values)):
+
+                    y_values[i]=dates.datestr2num(y_values[i])
+                    print(y_values[i],2)
+
+
+        print(xd, yd)
+
+        for i in range(0,len(x_values)):
+            a.plot_date(x_values[i],y_values[i],  xdate=xd, ydate = yd)
+
 
         # a.invert_yaxis()
 
@@ -49,10 +80,6 @@ class board:
 
         canvas.get_tk_widget().grid(column=0, row=1, columnspan=4, padx=20, pady=20)
         canvas.draw()
-
-
-
-
 
 
 

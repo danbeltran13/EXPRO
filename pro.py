@@ -2,6 +2,7 @@
 import matplotlib.dates as dates
 import matplotlib.pyplot as pyplot
 import tkinter
+from numpy import interp
 
 FILE = 'ex3.csv'
 file = open(FILE,'r')
@@ -16,7 +17,7 @@ DAYS = []
 INFO = []
 
 # SAVES ALL EXCERCISES
-EXLIST = ['DATES','TIME','WEIGHT']
+EXLIST = ['DATES','TIME','WEIGHT','BODY FAT']
 
 # FOLLOWING LINE CREATES AN ARRAY OF DATES
 DATES = file.readline().rstrip("\n").split(',')
@@ -49,6 +50,9 @@ for line in file:
     if DATA[0] == 'WEIGHT':
         for j in range(1,len(DATA)):
             DAYS[j-1].update({'WEIGHT': DATA[j]})
+    if DATA[0] == 'BODY FAT':
+        for j in range(1,len(DATA)):
+            DAYS[j-1].update({'BODY FAT': DATA[j]})
 
 
 
@@ -72,9 +76,51 @@ for line in file:
                 DAYS[j-1][CurrentEx[j-1]].append(DATA[j])
     i += 1
 
+def convertTime(String):
+    time = String.split(' ')
+
+    time[0] = time[0].replace(':','')
+    if time[1] == 'PM' and time[0][0:2] !='12':
+        time[0] = int(time[0])+1200
+    elif time[0]=='1200' and time[1] == 'AM':
+        time[0] = 0
+    elif time[0][0:2]=='12' and time[1]== 'PM':
+        time[0]= int(time[0])
+    else:
+        time[0] = int(time[0])
+    return time[0]
+
+def calculateBF(String):
+    me = String.split('/')
+    ave = 0
+    for i in range(0,len(me)):
+        ave  += float((me[i]))
+    ave /= len(me)
+
+    if ave < (1/4):
+        return interp(ave,[0,(1/4)],[5,8])  # PROBLEM NEARING 0 PINCH
+    if ave <(1/2):
+        return interp(ave, [(1/4), (1 / 2)], [9, 13])
+    if ave<(3/4):
+        return interp(ave, [(1/2), (3/4)], [14, 18])
+    if ave < (1):
+        return interp(ave, [(3/4), (1)], [19, 22])
+    if ave<(3/2):
+        return interp(ave, [(1), (3/2)], [23, 27])
+    if ave < (2):
+        return interp(ave, [(3/2), (2)], [28, 32])
+    if ave <(5/2):
+        return interp(ave, [2, (5/2)], [33, 40])
+
+
+
+
+
+
 
 # VOLUME IS USED TO AS A MEASUE TO CALCULATE PROGRESS
 def returnList (String, Volume = True ):
+
     # IF DATES IS REQUESTED THEN RETURNS LIST USED IN PROGRAM
     if String == 'DATES':
         return DATES
@@ -89,6 +135,7 @@ def returnList (String, Volume = True ):
 
             # IF THE DAY HAS THE REQUESTED EXRECISE
             if String in DAYS[i]:
+
                 # VOLUME IS USED TO MEASURE PROGRESS OF AN EXRECISE, WILL BE THE DEFAULT, FOUND BY MULTIPYLING SETS BY REPS
 
                 if Volume:
@@ -113,19 +160,27 @@ def returnList (String, Volume = True ):
 
                         t.append(DAYS[i][String])
                 else:
-                    if String ==  'WEIGHT':
+                    if String == 'WEIGHT':
                         if DAYS[i][String] != '':
                             t.append(float(DAYS[i][String]))
                         else:
                             t.append(DAYS[i][String])
                     if String == 'TIME':
                         if DAYS[i][String] != '':
-                            t.append((DAYS[i][String]))
-                            print(t)
+
+                            t.append((convertTime((DAYS[i][String]))))
+
+                        else:
+                            t.append(DAYS[i][String])
+                    if String == 'BODY FAT':
+                        if DAYS[i][String] != '':
+
+                            print(DAYS[i][String],2)
+                            t.append(calculateBF(DAYS[i][String]))
                         else:
                             t.append(DAYS[i][String])
 
-            else :
+            else:
                 t.append('')
 
         return t

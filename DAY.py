@@ -24,9 +24,20 @@ class board:
         x = box_x.get(tkinter.ACTIVE)
         y = box_y.get(tkinter.ACTIVE)
 
+        x_values = []
+        y_values = []
+
         #GETS THE X AND Y VALUES
-        x_values = list.returnList(x)
-        y_values = list.returnList(y,Volume = False)
+        if x in ('DATE','TIME' , 'WEIGHT' ,'BODY FAT'):
+            x_values = list.returnList(x,Volume = False)
+        else:
+            x_values = list.returnList(x)
+
+        if y in ('DATE',  'TIME', 'WEIGHT', 'BODY FAT'):
+
+            y_values = list.returnList(y,Volume = False)
+        else:
+            y_values = list.returnList(y)
 
 
 
@@ -44,15 +55,15 @@ class board:
 
         xd= False
         yd = False
-        print(xd, yd)
+
         if x == 'DATES':
             xd = True
 
             for i in range(0,len(x_values)):
                 x_values[i]=dates.datestr2num(x_values[i])
-                print(x_values[i],1)
 
-        print(x_values,1,y_values,2)
+
+
         if y == 'DATES':
             yd = True
             # IF X AND Y ARE BOTH DATES THEY SHARE THE SAME MEMORY ADRESS THEREFORE A CHANGE IS ONLY REQUIRED IN 1
@@ -60,10 +71,8 @@ class board:
                 for i in range(0,len(x_values)):
 
                     y_values[i]=dates.datestr2num(y_values[i])
-                    print(y_values[i],2)
 
 
-        print(xd, yd)
 
         for i in range(0,len(x_values)):
             a.plot_date(x_values[i],y_values[i],  xdate=xd, ydate = yd)
@@ -71,7 +80,7 @@ class board:
 
         # a.invert_yaxis()
 
-        a.set_title(x +'vs.'+y , fontsize=12)
+        a.set_title(x +' vs. '+y , fontsize=12)
         a.set_ylabel(y ,fontsize=12)
         a.set_xlabel(x, fontsize=12)
         a.grid()

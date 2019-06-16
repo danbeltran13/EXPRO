@@ -37,7 +37,7 @@ class board:
 
             y_values = list.returnList(y,Volume = False)
         else:
-            y_values = list.returnList(y)
+            y_values = list.returnList(y, MAX= True)
 
 
 

@@ -119,7 +119,7 @@ def calculateBF(String):
 
 
 # VOLUME IS USED TO AS A MEASUE TO CALCULATE PROGRESS
-def returnList (String, Volume = True ):
+def returnList (String, Volume = True, MAX = False):
 
     # IF DATES IS REQUESTED THEN RETURNS LIST USED IN PROGRAM
     if String == 'DATES':
@@ -146,14 +146,28 @@ def returnList (String, Volume = True ):
                     if DAYS[i][String] != '':
 
                         # WE ARE ONLY FINDING THE VOLUME OF THE FIRST SET
-                        w = DAYS[i][String][1].split('/')
+                        totalVolume = 0
+                        max = 0
+                        for j in range(0,len(DAYS[i][String])):
+                            w = DAYS[i][String][j].split('/')
+                            print(w)
+                            # LOOPS THOUGH 2 THINGS
+                            for k in range(0, len(w)):
+                                w[k] = float(w[k])
 
-                        # LOOPS THOUGH 2 THINGS
-                        for i in range(0, len(w)):
+                            if max < w[0]:
+                                max = w[0]
 
-                            w[i] = float(w[i])
+                            s = 1
+                            for m in w:
+                                s *= m
+                            totalVolume += s
 
-                        t.append(w[0] * w[1])
+                        if MAX == True:
+                            t.append(MAX)
+                        else:
+                            t.append(totalVolume)
+
 
                     # SAVES AN EMPTY SPACE IF SET IS EMPTY
                     else:

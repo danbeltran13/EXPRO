@@ -16,6 +16,7 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from matplotlib.figure import Figure
 import matplotlib.dates as dates
 
+MAXED = False
 
 class board:
     # WILL DISPLAY GRAPH BASED ON VALUES GIVEN FROM LISTBOXES
@@ -31,13 +32,13 @@ class board:
         if x in ('DATE','TIME' , 'WEIGHT' ,'BODY FAT'):
             x_values = list.returnList(x,Volume = False)
         else:
-            x_values = list.returnList(x)
+            x_values = list.returnList(x, MAX = MAXED)
 
         if y in ('DATE',  'TIME', 'WEIGHT', 'BODY FAT'):
 
             y_values = list.returnList(y,Volume = False)
         else:
-            y_values = list.returnList(y, MAX= True)
+            y_values = list.returnList(y, MAX = MAXED)
 
 
 
@@ -77,8 +78,6 @@ class board:
         for i in range(0,len(x_values)):
             a.plot_date(x_values[i],y_values[i],  xdate=xd, ydate = yd)
 
-
-        # a.invert_yaxis()
 
         a.set_title(x +' vs. '+y , fontsize=12)
         a.set_ylabel(y ,fontsize=12)

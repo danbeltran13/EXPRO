@@ -1,0 +1,42 @@
+DATE,5/9/19,5/13/19,5/15/19,5/17/19,5/20/19,5/22/19,5/24/19,5/27/19,5/30/19,6/1/19,6/3/19,6/5/19,6/7/19,6/11/19,6/14/19,6/16/19,6/20/19,6/24/19,6/26/19,6/29/19
+TIME,5:40 PM,9:00 AM,9:40 PM,9:30 AM,10:50 AM,8:50 AM,4:15 PM,9:30 AM,7:00 PM,10:50 AM,9:00 AM,7:30 PM,7:30 PM,8:50 PM,8:00 PM,10:30 PM,6:45 PM,9:00 AM,10:30 AM,9:45 AM
+WEIGHT,,,148,147.6,150.4,150.4,150.8,150.8,152.4,150,152.2,153.4,151.2,152.2,151.4,152.4,152.6,155.2,152.4,151.2
+BODY FAT,,,,,,,,,,,.92/.91/1.04,.77/1.17/1.11,.74/1.01/.83,.71/1.35/.96,.71/1.3/.98,.81/1.31/1.23,.76/1.13/1,.73/.95/1.13,.95/.97/1.05,.65/.8/1.05
+EX,Bench Press,Bench Press,Deadlift ,Bench Press,Deadlift,Bench Press,Deadlift ,Bench Press,Deadlift,Bench Press,Deadlift,Bench Press,Deadlift,Bench Press,Deadlift,Bench Press,Deadlift,Bench Press,Deadlift,Bench Press
+WU,40/8/2,50/12/2,15/18/2,25/12/2,25/12/2,50/12/1,27.5/12/2,50/12/1,35/17/1,50/12/1,35/12/1,32.5/12/2,40/12/1,50/8/2, 50/12/1,50/10/1,50/12/1,50/12/1,55/12/1,50/12/1
+SET 1,52.5/8,62.5/4,15/15,50/8,35/12,50/8,50/12,60/6,52.5/12,60/5,55/12,55/8,60/12,60/5,65/12,60/6,70/12,60/7,75/12,60/4
+SET 2,60/4,55/7,25/12,50/8,40/12,57.5/6,50/12,60/4,55/12,60/4,57.5/13,60/5,65/12,60/5,70/12,60/5,75/12,62.5/4,85/10,60/3
+SET 3,60/6,55/7,,57.5/5,42.5/12 ,57.5/5,50/12,60/4,57.5/12,55/7,62.5/13,60/3,70/12,55/6,75/12,60/4,80/12,62.5/3,85/8,
+SET 4,60/4,55/5,,57.5/6,,55/7,,55/8,,55/5,,60/5,,55/7,,60/3,,60/5,,
+SET 5,,,,,,,,,,,,,,,,60/5,,,,
+,,,,,,,,,,,,,,,,,,,,
+EX,Dips,Barbell Back Squat,Inclined Dumbell Press,Barbell Back Squat,Inclined Dumbell Press,Barbell Back Squat,Inclined Dumbell Press,Barbell Back Squat,Inclined Dumbell Press,Barbell Back Squat,Inclined Dumbell Press,Barbell Back Squat,Inclined Dumbell Press,Barbell Back Squat,Inclined Dumbell Press,Barbell Back Squat,Inclined Dumbell Press,Barbell Back Squatt,Inclined Dumbell Press,
+WU,NA,0,25/12/2,15/15/1,25/12/2,25/12/1,NA,27.5/12/1,NA,30/12/1,NA,30/12/1,NA,35/12,NA,NA,NA,NA,NA,
+SET 1,155/10,10/12,30/12,15/15,30/12,25/12,35/12,37.5/12,35/12,40/12,35/13,35/12,40/12,45/9,45/9,45/10,45/10,50/11,45/11,
+SET 2,155/12,25/10,30/12,35/8,35/12,35/10,35/12,40/12,40/11,42.5/9,40/12,40/12,45/8,45/10,45/8,50/9,45/8,55/8,45/6,
+SET 3,155/10,25/11,30/12,35/8,35/12,35/10,35/12,40/12,40/7,42.5/9,45/6,45/10,45/6,47.5/8,45/6,55/7,45/8,55/10,45/8,
+SET 4,155/10,,,,,,,,,,,,,,,,,,,
+SET 5,155/10,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+EX,Lateral Raises,Pull Ups,Inverter Row,Pull Ups,Inverted Row,Pull Ups,Inverted Row,Pull Ups,Inverted Row,Pull Ups,Inverted Row,Pull Ups,Inverted Row,Pull Ups,Inverted Row,Pull Ups,Inverted Row,Pull Ups,Inverted Row,
+WU,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,
+SET 1,15/14,0/12,25/12,0/12,2/12,0/13,4/12,0/14,6/15,0/14,7/15,25/8,7/14,35/7,7/15,40/7,7/14,45/6,7/15,
+SET 2,15/14,0/8,25/12,0/12,3/12,0/12,5/12,0/12,7/12,0/11,7/15,30/7,7/14,40/5,7/14,45/5,7/13,45/4,7/14,
+SET 3,20/12,0/8,25/12,0/9,4/12,0/10,6/11,0/9,7/12,0/10,7/12,35/5,7/12,40/5,7/13,45/4,7/13,42.5/4,7/13,
+,,,,,,,,,,,,,,,,,,,,
+EX,Shoulder Press,Machine Leg Curls,Lateral Raises,Biceps Curls,Lateral Raises,Machine Leg Curl,Lateral Raises,Standing Overhead Barbell Press,Lateral Raises,Machine Leg Curls,Lateral Raises,Machine Leg Curls,Lateral Raises,Standing Overhead Press,Lateral Raises,Standing Overhead Press,Lateral Raises,Standing Overhead Press,Lateral Raises,
+WU,20/8/1,25/10/1,NA,NA,NA,NA,NA,10/12,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,
+SET 1,25/6,25/10,25/12,30/8,25/12,25/14,25/12,15/12,25/12,27.5/15,25/13,30/15,25/12,25/10,25/12,25/11,25/15,30/7,25/14,
+SET 2,25/8,25/15,25/12,30/8,25/12,25/15,25/12,17.5/12,25/12,30/15,25/13,35/9,25/13,25/9,25/12,30/6,25/12,30/5,25/12,
+SET 3,,25/12,25/12,30/8,25/12,25/15,25/12,,25/12,30/15,25/13,35/9,25/12,25/7,25/12,30/5,25/12,30/5,25/12,
+,,,,,,,,,,,,,,,,,,,,
+EX,,Standing Overhead Barbell Press,,,,,,,Biceps Curls,Standing Overhead Barbell Press,Bicep Curls,Standing Overhead Press,Bicep Curls,,,,Bicep Curls,,,
+WU,,0/10,,,,,,,NA,NA,NA,NA,NA,,,,NA,,,
+SET 1,,5/12,,,,,,,30/8,10/12,30/12,20/12,35/7,,,,35/8,,,
+SET 2,,10/11,,,,,,,,17.5/12,35/8,25/9,35/7,,,,35/6,,,
+SET 3 ,,12.5/12,,,,,,,,20/8,35/5,,35/6,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+COMMENTS,,,,,,GET ENOUGH SLEEP,UNSURE IF USING PROPER FORM FOR INCLINDED DUMBELL PRESS,BE CAREFULL WITH TIME MANAGMENT,"WITH BICEPS CURLS HANDS WERE SHREDDING APART, NEED GLOVES",,"FOR BODY FAT CALCULATIONS, USE BIGGEST MEASURMENTS(ELLINGTON DARDEN)",DONT EAT TO MUCH BEFORE EXCERCISE,,,,,,,,
+,,,,,,,MUST DO BULGARIAN SPLIT SQUAT,,,,,,,,,,,,,
+,,,,,,,MUST DO OVERHEAD BARBELL PRESS,,,,,,,,,,,,,

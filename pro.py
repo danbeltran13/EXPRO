@@ -4,7 +4,7 @@ import matplotlib.pyplot as pyplot
 import tkinter
 from numpy import interp
 
-FILE = 'ex3.csv'
+FILE = 'ex5.csv'
 file = open(FILE,'r')
 
 
@@ -143,17 +143,24 @@ def returnList (String, Volume = True, MAX = False):
                     # FINDS THE VOLUME OF THE FIRST SET IF NOT EMPTY, APPENDS A VALUE IN ANY CASE SO THAT
                     #  CAN BE USED WITH OTHER ARRAYS
                     # DAYS[i] - PICKS A DAY, [String] - PICKS EXCERCISE IN DICTIONARY, [int] - SET OF AN EXCERCISE (A STRING)
+
+                    print(DAYS[i][String],2)
                     if DAYS[i][String] != '':
 
                         # WE ARE ONLY FINDING THE VOLUME OF THE FIRST SET
                         totalVolume = 0
                         max = 0
+
                         for j in range(0,len(DAYS[i][String])):
                             w = DAYS[i][String][j].split('/')
                             print(w)
                             # LOOPS THOUGH 2 THINGS
                             for k in range(0, len(w)):
-                                w[k] = float(w[k])
+                                if w[k] == 'NA':
+                                    w[k] = 1
+                                else:
+                                    w[k] = float(w[k])
+
 
                             if max < w[0]:
                                 max = w[0]
@@ -164,7 +171,8 @@ def returnList (String, Volume = True, MAX = False):
                             totalVolume += s
 
                         if MAX == True:
-                            t.append(MAX)
+
+                            t.append(max)
                         else:
                             t.append(totalVolume)
 
@@ -189,7 +197,7 @@ def returnList (String, Volume = True, MAX = False):
                     if String == 'BODY FAT':
                         if DAYS[i][String] != '':
 
-                            print(DAYS[i][String],2)
+
                             t.append(calculateBF(DAYS[i][String]))
                         else:
                             t.append(DAYS[i][String])
